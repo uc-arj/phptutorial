@@ -119,8 +119,192 @@
     $x = null;
     var_dump($x);
 
+    echo "<h1>String Function Declartion</h1>";
+    $x="faul Paul";
+    echo "<h4>String length</h4>";
+    echo strlen($x);
+    echo "<br>";
+    echo "<h4>String word count</h4>";
+    echo str_word_count($x);
+    echo "<br>";
+    echo "<h4>String reverse</h4>";
+    echo strrev($x);
+    echo "<br>";
+    echo "<h4>String postion finder of Pa</h4>";
+    echo strpos($x,"Pa");
+    echo "<br>";
+    echo "<h4>String replace</h4>";
+    echo str_replace("Paul","carry",$x);
+    echo "<br>";
 
+    echo "<h4>For Nan Checking</h4>";
+    $x= 8;
+    var_dump($x);
+    echo is_nan($x);
+    
+    
+    echo "<br>";
+    echo "<h4>Constant define</h4>";
+    define("follow","hello this is constant value of pi define by myside");
+    define("pi","992");
+    echo "pi:", pi;
+    echo "<br>";
+    echo follow;
+    echo "<br>";
+    echo "<h1>Concat</h1>";
+    $x="hello";
+    $y="Arpan";
+    echo $x.$y;
+    echo "<h1>If else condition</h1>";
+    echo" <h4>Define for day when user Hour more than 20</h4>";
+    $t=date("H");
+    if ($t < "20") {
+      echo "Have a good day!";
+    } else {
+      echo "Have a good night!";
+    }
+    echo "<br>";
+    if ($t < "10") {
+      echo "Have a good morning!";
+    } elseif ($t < "20") {
+      echo "Have a good day!";
+    } else {
+      echo "Have a good night!";
+    }
+    echo "<br>";
+    echo "<h1>Switch Case condition</h1>";
+    $favcolor = "violet";
+
+    switch ($favcolor) {
+      case "red":
+        echo "Your favorite color is red!";
+        break;
+      case "blue":
+        echo "Your favorite color is blue!";
+        break;
+      case "green":
+        echo "Your favorite color is green!";
+        break;
+      default:
+        echo "Your favorite color is neither red, blue, nor green!";
+    }
+    echo "<br>";
+
+    echo "<h1>Break and Continue</h1>";
+    for ($x = 0; $x < 10; $x++) {
+      if ($x == 4) {
+        break;
+      }
+      echo "The number is: $x <br>";
+    }
+    for ($x = 0; $x < 10; $x++) {
+      if ($x == 4) {
+        continue;
+      }
+      echo "The number is: $x <br>";
+    }
+    $x=0;
+    while($x<10){
+      if($x==4){
+        $x++;
+
+        // echo "$x";
+        
+      }
+  
+     echo "the number is for : $x <br>";
+     $x++;
+     echo"$x";
+    }
+    echo "<h1>Loops</h1>";
+    $x = 1;
+
+     while($x <= 5) {
+      echo " while loop The number is: $x <br>";
+      $x++;
+    }
+    echo "<br>";
+    for($x=0;$x<10;$x++){
+      echo "for loop the Number: $x<br>";
+    }
+    echo "<br>";
+    do {
+      echo " do while The number is: $x <br>";
+      $x++;
+    } while ($x <= 12);
+    echo "<br>";
+    $colors = array("red", "green", "blue", "yellow");
+
+    echo"for each<br>";
+    foreach ($colors as $value) {
+      echo "$value <br>";
+    }
+
+    echo "<br>";
+    $age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
+    echo "for each <br>";
+      foreach($age as $x => $val) {
+        echo " $x = $val<br>";
+      }
+    echo "<h1>Function</h1>";
+    function familyName($fname) {
+      echo "Function value $fname Refsnes.<br>";
+    }
+    
+    familyName("Jani");
+    familyName("Hege");
+    familyName("Stale");
+    familyName("Kai Jim");
+    familyName("Borge");
+    echo "<br>";
+    $d=cal_days_in_month(CAL_GREGORIAN,10,2005);
+      echo "There was $d days in October 2005";
+
+    echo "<br>";
+    echo "<h4>default parameter</h4>";
+      function setHeight(int $minheight = 50) {
+        echo "The height is : $minheight <br>";
+      }
+      
+      setHeight(350);
+      setHeight(); // will use the default value of 50
+      setHeight(135);
+      setHeight(80);
+      echo "<br>";
+      echo "<h4>sum Function</h4>";
+      function sum(int $x, int $y) {
+        $z = $x + $y;
+        return $z;
+      }
+
+      echo "5 + 10 = " . sum(5, 10) . "<br>";
+      echo "7 + 13 = " . sum(7, 13) . "<br>";
+      echo "2 + 4 = " . sum(2, 4);
+      echo "<br>";
+      echo "<h4>Function by pass by reference</h4>";
+      function add_five(&$value) {
+        $value += 5;
+      }
+      
+      $num = 2;
+      echo($num);
+      echo "<br>";
+      add_five($num);
+      echo $num;
+      echo "<br>";
+      echo "<h4>Function by pass by call</h4>";
+      function add_fivecall($value) {
+        $value += 5;
+      }
+      
+      $num = 2;
+      echo($num);
+      echo "<br>";
+      add_fivecall($num);
+      echo $num;
     ?>
+    
+
 
 </body>
 
