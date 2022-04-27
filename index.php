@@ -330,7 +330,7 @@
         array("Saab",5,2),
         array("Land Rover",17,15)
       );
-
+      echo "<h3>accessing method</h3>";
       for ($row = 0; $row < 4; $row++) {
         echo "<p><b>Row number $row</b></p>";
         echo "<ul>";
@@ -340,6 +340,7 @@
         echo "</ul>";
       }
       echo"<br>";
+
       echo "<h4>Sorting</h4>";
       echo "<p>sort()</p>";
       sort($employ);
@@ -370,6 +371,7 @@
           }
 
           $a=array(1,2,3,4,5);
+          print_r(array_map("myfunction",$a));
 
       echo "<h4>count</h4>";
       echo count($employ);
@@ -407,6 +409,7 @@
       $last_names = array_column($a,'last_name','id');
       print_r($last_names);
       echo"<br>";
+
       echo "<h4>array_combine</h4>";
       $fname=array("Peter","Ben","Joe");
         $age=array("35","37","43");
@@ -414,59 +417,69 @@
         $c=array_combine($fname,$age);
         print_r($c);
         echo"<br>";
-        echo "<h4>array_merge</h4>";
-        print_r(array_merge($fname,$age));
-        echo"<br>";
-        echo "<h4>array push and pop</h4>";
-        $a=array("red","green","blue");
-        array_pop($a);
-        print_r($a);
+
+      echo "<h4>array_merge</h4>";
+      print_r(array_merge($fname,$age));
+      echo"<br>";
+
+      echo "<h4>array push and pop</h4>";
+      $a=array("red","green","blue");
+      array_pop($a);
+      print_r($a);
+      
+      echo"<br>";
+      array_push($a,"blue","yellow");
+      print_r($a);
+
+      echo "<h4>array_difference and unique</h4>";
+      $a2=array("a"=>"red","b"=>"green","c"=>"blue","d"=>"yellow");
+      $a1=array("e"=>"red","f"=>"green","g"=>"blue");
         
-        echo"<br>";
-        array_push($a,"blue","yellow");
-        print_r($a);
-        echo "<h4>array_difference and unique</h4>";
-        $a2=array("a"=>"red","b"=>"green","c"=>"blue","d"=>"yellow");
-        $a1=array("e"=>"red","f"=>"green","g"=>"blue");
-        
-        $result=array_diff($a1,$a2);
-        // echo"<br>";
-        $result=array_diff_key($a1,$a2);
-        // echo"<br>";
-        print_r(array_unique($a1));
+      $result=array_diff($a1,$a2);
+      // echo"<br>";
+      $result=array_diff_key($a1,$a2);
+      // echo"<br>";
+      print_r(array_unique($a1));
 
 
-        echo "<h4>array_value</h4>";
-        print_r(array_values($a));
-        echo"<br>";
-        echo" <h1>Json function</h1>";
-        echo "<h4>Jso function decode encode</h4>";
-        $jsonobj = '{"Peter":35,"Ben":37,"Joe":43}';
+      echo "<h4>array_value</h4>";
+      print_r(array_values($a));
+      echo"<br>";
 
-        var_dump(json_decode($jsonobj));
-        echo"<br>";
-        echo"<br>";
-        echo json_encode($jsonobj);
-        echo" <h1>Date function</h1>";
-        echo "Today is " . date("Y/m/d") . "<br>";  
-        echo "The time is " . date("h:i:sa");
-        echo "<h4>Dat eAdd function</h4>";
-        echo"<br>";
-        $date=date_create("2013-03-15");
-        date_add($date,date_interval_create_from_date_string("40 days"));
-        echo date_format($date,"Y/m/d");
-        echo"<br>";
-        echo "<h4>date format</h4>";
-        $date=date_create("2013-03-15 124520");
-        echo date_format($date,"Y/m/d H:i:s");
-        echo "<h4>gettimeof day</h4>";
-        echo(strtotime("last Sunday"));
-        echo"<br>";
-        echo gettimeofday(true);
-        $t=time();
-        echo "<h4>time function</h4>";
-        echo($t . "<br>");
-        echo(date("Y-m-d H:m:s",$t));
+      echo" <h1>Json function</h1>";
+      echo "<h4>Jso function decode encode</h4>";
+      $jsonobj = '{"Peter":35,"Ben":37,"Joe":43}';
+
+      var_dump(json_decode($jsonobj));
+      echo"<br>";
+      echo"<br>";
+      echo json_encode($jsonobj);
+
+    echo" <h1>Date function</h1>";
+    echo "Today is " . date("Y/m/d") . "<br>";  
+    echo "The time is " . date("h:i:sa");
+    echo "<h4>Dat eAdd function</h4>";
+
+    echo"<br>";
+    $date=date_create("2013-03-15");
+    date_add($date,date_interval_create_from_date_string("40 days"));
+    echo date_format($date,"Y/m/d");
+    echo"<br>";
+
+    echo "<h4>date format</h4>";
+    $date=date_create("2013-03-15 124520");
+    echo date_format($date,"Y/m/d H:i:s");
+    echo "<h4>gettimeof day</h4>";
+    echo(strtotime("last Sunday"));
+    echo"<br>";
+
+    echo gettimeofday(true);
+
+    
+    $t=time();
+    echo "<h4>time function</h4>";
+    echo($t . "<br>");
+    echo(date("Y-m-d H:m:s",$t));
 ?>
 
 
