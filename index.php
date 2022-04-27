@@ -302,6 +302,177 @@
       echo "<br>";
       add_fivecall($num);
       echo $num;
+      echo "<br>";
+      echo "<h1>Array</h1>";
+      $employ=array("scoda","bMw","toytoa");
+      echo "I have $employ[0]<br>";
+      
+      echo "<br>";
+      $arrlength=count($employ);
+      echo "array loop <br>";
+      for($x=0;$x<$arrlength;$x++){
+        echo $employ[$x];
+        echo"<br>";
+      }
+
+      echo "<h1>Associated Array</h1>";
+      $age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
+
+      foreach($age as $x => $x_value) {
+        echo "Key=" . $x . ", Value=" . $x_value;
+        echo "<br>";
+      }
+      echo "<h1>MultiDimensional Array</h1>";
+
+      $cars = array (
+        array("Volvo",22,18),
+        array("BMW",15,13),
+        array("Saab",5,2),
+        array("Land Rover",17,15)
+      );
+
+      for ($row = 0; $row < 4; $row++) {
+        echo "<p><b>Row number $row</b></p>";
+        echo "<ul>";
+        for ($col = 0; $col < 3; $col++) {
+          echo "<li>".$cars[$row][$col]."</li>";
+        }
+        echo "</ul>";
+      }
+      echo"<br>";
+      echo "<h4>Sorting</h4>";
+      echo "<p>sort()</p>";
+      sort($employ);
+      print_r($employ);
+      echo"<br>";
+      ksort($age);
+      print_r($age);
+      echo"<br>";
+
+
+      echo "<h4>Key Finder</h4>";
+      $a=array("Volvo"=>"XC90","BMW"=>"X5");
+      echo "$a[Volvo]<br>";
+      if (array_key_exists("Volvo",$a))
+        {
+        echo "Key exists!";
+        }
+      else
+        {
+        echo "Key does not exist!";
+        }
+
+      
+      echo "<h4> Mapping</h4>";
+        function myfunction($v)
+          {
+            return($v*$v);
+          }
+
+          $a=array(1,2,3,4,5);
+
+      echo "<h4>count</h4>";
+      echo count($employ);
+      echo"<br>";
+
+      echo "<h4>in_array</h4>";
+
+      if (in_array("bMw", $employ))
+      {
+      echo "Match found";
+      }
+    else
+      {
+      echo "Match not found";
+      }
+      echo "<h4>array_columnn</h4>";
+      $a = array(
+        array(
+          'id' => 5698,
+          'first_name' => 'Peter',
+          'last_name' => 'Griffin',
+        ),
+        array(
+          'id' => 4767,
+          'first_name' => 'Ben',
+          'last_name' => 'Smith',
+        ),
+        array(
+          'id' => 3809,
+          'first_name' => 'Joe',
+          'last_name' => 'Doe',
+        )
+      );
+      echo"<br>";
+      $last_names = array_column($a,'last_name','id');
+      print_r($last_names);
+      echo"<br>";
+      echo "<h4>array_combine</h4>";
+      $fname=array("Peter","Ben","Joe");
+        $age=array("35","37","43");
+
+        $c=array_combine($fname,$age);
+        print_r($c);
+        echo"<br>";
+        echo "<h4>array_merge</h4>";
+        print_r(array_merge($fname,$age));
+        echo"<br>";
+        echo "<h4>array push and pop</h4>";
+        $a=array("red","green","blue");
+        array_pop($a);
+        print_r($a);
+        
+        echo"<br>";
+        array_push($a,"blue","yellow");
+        print_r($a);
+        echo "<h4>array_difference and unique</h4>";
+        $a2=array("a"=>"red","b"=>"green","c"=>"blue","d"=>"yellow");
+        $a1=array("e"=>"red","f"=>"green","g"=>"blue");
+        
+        $result=array_diff($a1,$a2);
+        // echo"<br>";
+        $result=array_diff_key($a1,$a2);
+        // echo"<br>";
+        print_r(array_unique($a1));
+
+
+        echo "<h4>array_value</h4>";
+        print_r(array_values($a));
+        echo"<br>";
+        echo" <h1>Json function</h1>";
+        echo "<h4>Jso function decode encode</h4>";
+        $jsonobj = '{"Peter":35,"Ben":37,"Joe":43}';
+
+        var_dump(json_decode($jsonobj));
+        echo"<br>";
+        echo"<br>";
+        echo json_encode($jsonobj);
+        echo" <h1>Date function</h1>";
+        echo "Today is " . date("Y/m/d") . "<br>";  
+        echo "The time is " . date("h:i:sa");
+        echo "<h4>Dat eAdd function</h4>";
+        echo"<br>";
+        $date=date_create("2013-03-15");
+        date_add($date,date_interval_create_from_date_string("40 days"));
+        echo date_format($date,"Y/m/d");
+        echo"<br>";
+        echo "<h4>date format</h4>";
+        $date=date_create("2013-03-15 124520");
+        echo date_format($date,"Y/m/d H:i:s");
+        echo "<h4>gettimeof day</h4>";
+        echo(strtotime("last Sunday"));
+        echo"<br>";
+        echo gettimeofday(true);
+        $t=time();
+        echo "<h4>time function</h4>";
+        echo($t . "<br>");
+        echo(date("Y-m-d H:m:s",$t));
+?>
+
+
+
+
+        
     ?>
     
 
