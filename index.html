@@ -8,27 +8,315 @@ Updated By     : Arpan Jain
 Updated Date   : 28/04/2022
 Last Update    : 28/04.2022
 -->
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-</head>
-<body>
-    <p>hello pragraph <i class="fa fa-home" aria-hidden="true"></i></p>
-    <button>Click to hide</button>
-    <script>
-        $(document).ready(function(){
-            $("button").click(function(){
-                $("p").hide();
-            });
-        });
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script
+            src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </head>
+    <body>
+        <h1>JQuery</h1>
+        <h2>Syntax</h2>
+        <p>$(document).ready(function(){
+
+            // jQuery methods go here...
+
+            });</p>
+        <p>hello pragraph <i class="fa fa-home" aria-hidden="true"></i></p>
+        <div class="feature">hello world </div>
+
+        <br>
+        <p>this will Hide p tag having class feature by Hide function</p>
+        <p>above example </p>
+        <h2>Selector in jquery</h2>
+        <p>Used to hide hyperlink or to show</p>
+        <p><a href="#">hello</a></p>
+        <button class="hide"> click to hide </button>
+        <p>$("*") =>Selects all elements <br>
+            $(this) =>Selects the current HTML element <br>
+            $("p.intro")=> Selects all elements with class="intro" <br>
+            $("p:first")=> Selects the first element <br>
+            $("ul li:first")=> Selects the first element of the first <br>
+            $("ul li:first-child")=> Selects the first element of every <br>
+            $("[href]")... many more</p>
+        <p>above example of it using p tag class</p>
+        <h2>Events</h2>
+        <p id="click">click effect</p>
+        <button class="click">click</button>
+        <p id="dbl">Doubleclickeffect</p>
+        <button class="dbl">Doubleclickeffect</button>
+        <p id="mouseleave"> mouseleave/mouseenter</p>
+        <p id="hover">hover</p>
+        <p>Click here to change any line of code written in paragraph</p>
+        <input type="text" id="focus" placeholder="Focus and blur effect">
+        <input type="text" id="blur" placeholder="Focus and blur effect">
+
+        <h2>Effect Jquery</h2>
+        
+        <button class="fadein"> click to show Fade effect</button>
+        <button class="fadeout"> click to fadeout effect</button>
+        <button class="fadetoggle"> Click to see Fadein or fade out effect by fade toggle</button>
+        <button class="fadeto"> Fade effect with opacity</button>
+            <div id="div1" style="width:500px;height:80px;display:none;background-color:orange;"></div><br>
+            <div id="div2" style="width:500px;height:80px;display:none;background-color:aliceblue;"></div><br>
+            <div id="div3" style="width:500px;height:80px;display:none;background-color:green;"></div>
+
+            <style> 
+                #panel, #flip,#flip2 {
+                  padding: 5px;
+                  text-align: center;
+                  background-color: #e5eecc;
+                  border: solid 1px #c3c3c3;
+                }
+                
+                #panel {
+                  padding: 50px;
+                  display: none;
+                }
+                #Chaining{
+                    padding:50px;
+                }
+                .hello{
+                    font-size: larger;
+                    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                }
+                #dimension {
+                    height: 100px;
+                    width: 300px;
+                    padding: 10px;
+                    margin: 3px;
+                    border: 1px solid blue;
+                    background-color: lightblue;
+                    }
+                    .ancestors * { 
+                            display: block;
+                            border: 2px solid lightgrey;
+                            color: lightgrey;
+                            padding: 5px;
+                            margin: 15px;
+                            }
+                </style>
+                </head>
+                <body>
+        
+        <div id="flip">Click to slide the panel down or up</div>
+        <div id="flip2">stop the sliding</div>
+        <div id="panel">Hello world!</div>
+
+        <button id="anime">Start Animation</button>
+        <button id="stopanime"> Stop all Animation</button>
+        <button id="stopall"> Stop but finish</button>
+        <div  class="animated" style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
 
         
+        <p id="callback" style="position: relative; top: 100px;">Hide this paragraph with callback effect</p>
+        <hr style="position: relative; top: 100px;">
+         <h2 style="position: relative; top: 100px;">Html with Jquery</h2>
+         <hr style="position: relative; top: 100px;">
+        <p id="Chaining" style="position: relative; top: 100px;" > Chaining <b>getcontent</b> method </p>
+        <hr style="position: relative; top: 100px;">    
+        <input type="text"  style="position: relative; top: 100px;" id="inputval" value="click to get value inside in alert box">
+        <hr style="position: relative; top: 100px;">
+        <p id="setvalue"  style="position: relative; top: 100px;" >
+            Hello Arpan
+        </p>
+        <hr style="position: relative; top: 100px;">
+        <button id="btn2" style="position: relative; top: 100px">Append list items</button>
+        <button id="btn3" style="position: relative; top: 100px">Prepend Items</button>
+        <ol  style="position: relative; top: 100px;">
+            <li>List item 1</li>
+            <li>List item 2</li>
+            <li>List item 3</li>
+          </ol>
+          <hr style="position: relative; top: 100px;">
+          <br>
+          <button id="btn4" style="position: relative; top: 100px">you add before key</button>
+          <p id="hello" style="position: relative; top: 100px">Hello all</p>
+          <hr style="position: relative; top: 100px;">
+        <button id="btn5" style="position: relative; top: 100px">you add after key</button> <br>
+         <hr style="position: relative; top: 100px;">
+        <div style="position: relative; top: 100px;background:#98bf21;height:100px;width:100px;" id="empty"> Hello click to empty </div>   
+        <hr style="position: relative; top: 100px;">
+        <button style="position: relative; top: 100px;" id="Toggle"> Toogle css class</button>  
+        <hr style="position: relative; top: 100px;">   
+        <div id="dimension" style="position: relative; top: 100px;"></div>
+        <hr style="position: relative; top: 100px;">   
+        <button style="position: relative; top: 100px;" id="dime"> Toogle css dimension</button>  
+        <hr style="position: relative; top: 100px;">  
+        <div class="ancestors">body (great-great-grandparent)
+        <div style="width:500px;height:200px; position: relative; top: 100px;">div (great-grandparent)
+            <ul>ul (grandparent)  
+              <li>li (direct parent)
+                <span>span</span>
+              </li>
+            </ul>   
+        </div>
+    </div>
+       <hr style="position: relative; top: 100px;">  
+
+
+        <script>
+        
+
+        $(document).ready(function(){
+        $(".hide").click(function(){
+            $("[href]").hide();
+        });
+        $(".click").click(function(){
+            $("#click").css("font-style","italic");
+        });
+        $(".dbl").click(function(){
+            $("#dbl").css("font-style","italic");
+        });
+
+        $("#mouseleave").mouseenter(function(){
+            $("#mouseleave").css("border", "2px solid yellow");
+        });
+        $("#mouseleave").mouseleave(function(){
+            $("#mouseleave").css("border", "2px solid green");
+        });
+        $("#hover").hover(function(){
+            $("#hover").css("font-size", "40px");
+        });
+        $("[type=text]").blur(function(){
+            $("[type=text]").css("background-color", "green");
+        });
+        $("[type=text]").focus(function(){
+            $("[type=text]").css("background-color", "yellow");
+        });
+        $("p").on("click",function(){
+            $(this).css("background-color", "yellow");
+        });
+        $(".fadein").click(function(){
+            $("#div1").fadeIn();
+            $("#div2").fadeIn("slow");
+            $("#div3").fadeIn(3000);
+        });
+        $(".fadeout").click(function(){
+            $("#div1").fadeOut();
+            $("#div2").fadeOut("slow");
+            $("#div3").fadeOut(3000);
+            });
+
+        $(".fadetoggle").click(function(){
+                $("#div1").fadeToggle();
+                $("#div2").fadeToggle("slow");
+                $("#div3").fadeToggle(3000);
+                });
+        $(".fadeto").click(function(){
+            $("#div1").fadeTo("slow", 0.5);
+            $("#div2").fadeTo("slow", 0.7);
+            $("#div3").fadeTo("slow", 1);
+          });
+
+          $("#flip").click(function(){
+            $("#panel").slideToggle(5000)
+            });
+        $("#anime").click(function(){
+            $(".animated").animate({left: '250px',top:'1600px',},1000);
+        });
+      
+        $("#anime").click(function(){
+            $(".animated").animate({
+                left:'500px',top:'1225px',
+            },1000);
+            });
+        $("#anime").click(function(){
+            $(".animated").animate({
+                left:'750px',top:'1600px',
+            },1000);
+        });
+        $("#anime").click(function(){
+            $(".animated").animate({
+                left:'1000px',top:'1225px',
+            },1000);
+        });
+        $("#anime").click(function(){
+            $(".animated").animate({
+                left:'1250px',top:'1600px',
+            },1000);
+        });
+        $("#anime").click(function(){
+            $(".animated").animate({
+                left:'1500px',top:'1225px',
+            },1000);
+        });
+        $("#flip2").click(function(){
+            $("#panel").stop(true,true);
+        });
+        $("#stopanime").click(function(){
+            $(".animated").stop(true);
+        });
+        $("#stopanime").click(function(){
+            $(".animated").stop(true,true);
+        });
+        $("#callback").click(function(){
+            $("#callback").animate({width:'200px',height:'200px',font_size:'60px'},);
+
+        });
+        $("#Chaining").click(function(){
+            $("#Chaining").css("border", "10px solid blue").slideUp(2000).slideDown(2000);
+        
+        });
+        $("#Chaining").click(function(){
+            alert( $("#Chaining").text());
+            alert( $("#Chaining").html());
+        
+        });
+        $("#inputval").click(function(){
+            alert( $("#inputval").val());
+
+        
+        });
+        $("#setvalue").click(function(){
+             $("#setvalue").text("you just click me");
+             $("#setvalue").html("<b>Hello user</b> you just clickit").css("font-size", "40px").css("width","400px").css("height","400px");
+        });
+        $("#btn2").click(function(){
+                $("ol").append("<li>Appended item</li>");
+            });
+         $("#btn3").click(function(){
+            $("ol").prepend("<li>Prepended item</li>");
+        });
+        $("#btn4").click(function(){
+            $("#hello").before("<b>Before</b>").css("position","relative").css("top", "100px");
+        });
+        $("#btn5").click(function(){
+            $("#hello").after("<b>After</b>").css("position","relative").css("top", "100px");
+        });
+        $("#empty").click(function(){
+             $("#empty").empty();
+        });
+        $("#empty").click(function(){
+             $("#empty").remove("");
+        });
+        $("#Toggle").click(function(){
+            $("#empty").toggleClass("hello").css({"background-color": "yellow", "font-size": "20px"});
+        });
+
+        $("#dime").click(function(){
+                var txt = "";
+                txt += "Outer width (+margin): " + $("#dimension").outerWidth(true) + "</br>";
+                txt += "Outer height (+margin): " + $("#dimension").outerHeight(true)+"<br>";
+                txt += "height: " + $("#dimension").height()+ "</br>";;
+                txt += "Width: " + $("#dimension").width()+ "</br>";;
+                txt += "Inner width: " + $("#dimension").innerWidth() + "</br>";
+                txt += "Inner height: " + $("#dimension").innerHeight()+ "</br>";;
+
+                $("#dimension").html(txt);
+      
+            });
+        
+            $(document).ready(function(){
+            $("span").parents("ul").css({"color": "red", "border": "2px solid red"});
+            });
+    });
+
+
     </script>
-</body>
+    </body>
 </html>
